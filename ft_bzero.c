@@ -1,3 +1,5 @@
+#include "libft.h"
+
 void	ft_bzero(void* buffer, unsigned int len)
 {
 	unsigned char *a;
@@ -5,6 +7,7 @@ void	ft_bzero(void* buffer, unsigned int len)
 	a = (unsigned char *)buffer;
 	while (len--)
 	{
-		*a++ = 0;
+		*a = 0;
+		a++;
 	}
 }

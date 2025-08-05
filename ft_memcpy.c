@@ -1,4 +1,6 @@
-void*	ft_memcpy(void *dest, const void *src, unsigned int n)
+#include "libft.h"
+
+void	*ft_memcpy(void *dest, const void *src, unsigned int n)
 {
 	unsigned char *a;
 	const unsigned char *b;
@@ -7,8 +9,9 @@ void*	ft_memcpy(void *dest, const void *src, unsigned int n)
 	b = (const unsigned char *)src;
 	while (n--)
 	{
-		*a++ = *b;
-		*b++;
+		*a = *b;
+		b++;
+		a++;
 	}
 	return (dest);
 }

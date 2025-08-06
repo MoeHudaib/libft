@@ -1,8 +1,8 @@
 #include "libft.h"
 
-int	ft_strncmp(const char *str1, const char *str2, unsigned int n)
+int	ft_strncmp(const char *str1, const char *str2, size_t n)
 {
-	unsigned int	i;
+	size_t	i;
 
 	i = 0;
 	while (i < n && (str1[i] || str2[i]))

@@ -1,9 +1,9 @@
 #include "libft.h"
 
-char	*ft_strnstr(const char *str, const char *substr, unsigned int n)
+char	*ft_strnstr(const char *str, const char *substr, size_t n)
 {
-	unsigned int	i;
-	unsigned int	j;
+	size_t	i;
+	size_t	j;
 
 	if (*substr == '\0')
 		return (char *)(str);

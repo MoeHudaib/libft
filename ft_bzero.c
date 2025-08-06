@@ -1,6 +1,6 @@
 #include "libft.h"
 
-void	ft_bzero(void* buffer, unsigned int len)
+void	ft_bzero(void* buffer, size_t len)
 {
 	unsigned char *a;
 

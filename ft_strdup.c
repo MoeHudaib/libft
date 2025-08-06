@@ -2,9 +2,9 @@
 
 char	*ft_strdup(const char *src)
 {
-	int	len;
+	size_t	len;
 	char	*copy;
-	int	i;
+	size_t	i;
 
 	len = ft_strlen(src);
 	i = 0;

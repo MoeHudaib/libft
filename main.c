@@ -1,19 +1,9 @@
 #include <stdio.h>
-#include <string.h>   // for comparison
-#include <stdlib.h>
+#include <string.h>   // for comparision
+#include "libft.h"
+#include <limits.h>
 
 // Declare your functions (assume you implemented them)
-void	*ft_memcpy(void *dst, const void *src, size_t n);
-void	*ft_memmove(void *dst, const void *src, size_t n);
-int	ft_toupper(int c);
-int	ft_tolower(int c);
-int	ft_atoi(char *str);
-char	*ft_strchr(const char *str, char c);
-char	*ft_strrchr(const char *str, char c);
-int	ft_strncmp(char *str1, char *str2, unsigned int n);
-void	*ft_memchr(const void *str, int c, unsigned int n);
-int	ft_memcmp(const void *s1, const void *s2, unsigned int n);
-char	*ft_strnstr(char *str, char *substr, unsigned int n);
 void	print_buffer(const char *label, char *buf, size_t size) {
 	printf("%s: \"", label);
 	for (size_t i = 0; i < size; i++) 
@@ -71,5 +61,22 @@ int	main(void) {
         printf("%d\n", ft_memcmp("12345AB", "12345ABC", 8));
 	printf("%s\n", ft_strnstr("12345AB", "34", 8));
 	printf("%d\n", ft_atoi("		    21382904"));
-	return 0;
+    	char *s;
+
+    	s = ft_itoa(0);
+    	printf("0 ➜ %s\n", s); free(s);
+
+    	s = ft_itoa(42);
+    	printf("42 ➜ %s\n", s); free(s);
+
+    	s = ft_itoa(-42);
+    	printf("-42 ➜ %s\n", s); free(s);
+
+    	s = ft_itoa(INT_MAX);
+    	printf("INT_MAX ➜ %s\n", s); free(s);
+
+    	s = ft_itoa(INT_MIN);
+    	printf("INT_MIN ➜ %s\n", s); free(s);
+
+    	return 0;
 }

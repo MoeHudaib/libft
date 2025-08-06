@@ -1,6 +1,6 @@
 #include "libft.h"
 
-void*	ft_memset(void* buffer, int value, unsigned int len)
+void*	ft_memset(void* buffer, int value, size_t len)
 {
 	unsigned char*	a;
 

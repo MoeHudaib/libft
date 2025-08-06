@@ -1,9 +1,9 @@
 #include "libft.h"
 
-unsigned int	strlcpy(char *dest, const char *src, unsigned int n)
+size_t	strlcpy(char *dest, const char *src, size_t n)
 {
-	unsigned int i = 0;
-	unsigned int src_len = 0;
+	size_t	i = 0;
+	size_t	src_len = 0;
 	// Calculate length of src
 	while (src[src_len])
 		src_len++;

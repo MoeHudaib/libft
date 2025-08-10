@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mhdeeb <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/08/10 13:01:00 by mhdeeb            #+#    #+#             */
+/*   Updated: 2025/08/10 13:04:16 by mhdeeb           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 static	int	is_in_set(char c, const char *set)
@@ -14,19 +26,24 @@ static	int	is_in_set(char c, const char *set)
 	return (0);
 }
 
+static void	set_values(size_t *a1, size_t *a2)
+{
+	*a1 = 0;
+	*a2 = 0;
+}
+
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t	start;
-	size_t	end;
-	size_t	len;
-	size_t	i;
+	size_t		start;
+	size_t		end;
+	size_t		len;
+	size_t		i;
 	char		*trimmed;
 
 	if (!s1 || !set)
 		return (NULL);
-	start = 0;
 	end = ft_strlen(s1);
-	i = 0;
+	set_values(&start, &i);
 	while (s1[start] && is_in_set(s1[start], set))
 		start++;
 	while (end > start && is_in_set(s1[end - 1], set))
@@ -42,5 +59,4 @@ char	*ft_strtrim(char const *s1, char const *set)
 	}
 	trimmed[i] = '\0';
 	return (trimmed);
-
 }

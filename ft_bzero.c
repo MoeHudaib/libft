@@ -1,8 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mhdeeb <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/08/10 11:25:50 by mhdeeb            #+#    #+#             */
+/*   Updated: 2025/08/10 11:27:52 by mhdeeb           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-void	ft_bzero(void* buffer, size_t len)
+void	ft_bzero(void *buffer, size_t len)
 {
-	unsigned char *a;
+	unsigned char	*a;
 
 	a = (unsigned char *)buffer;
 	while (len--)

@@ -1,10 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mhdeeb <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/08/10 13:04:43 by mhdeeb            #+#    #+#             */
+/*   Updated: 2025/08/10 13:05:10 by mhdeeb           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*substr;
-	size_t	i;
-	size_t	s_len;
+	char		*substr;
+	size_t		i;
+	size_t		s_len;
 
 	if (!s)
 		return (NULL);

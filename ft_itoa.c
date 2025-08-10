@@ -1,10 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mhdeeb <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/08/10 11:38:09 by mhdeeb            #+#    #+#             */
+/*   Updated: 2025/08/10 11:38:51 by mhdeeb           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 static int	int_len(int n)
 {
 	int	len;
-       
-	len = (n <= 0); // 0 or negative: at least one character
+
+	len = (n <= 0);
 	while (n)
 	{
 		len++;
@@ -15,7 +27,7 @@ static int	int_len(int n)
 
 char	*ft_itoa(int n)
 {
-	int	len;
+	int		len;
 	char	*str;
 	long	num;
 
